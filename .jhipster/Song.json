@@ -1,0 +1,31 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "title",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "difficulty",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "capo",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "progression",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20190829074043",
+    "dto": "no",
+    "searchEngine": false,
+    "service": "no",
+    "entityTableName": "song",
+    "databaseType": "sql",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}

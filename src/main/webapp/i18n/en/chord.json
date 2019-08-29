@@ -1,0 +1,25 @@
+{
+  "chordProApp": {
+    "chord": {
+      "home": {
+        "title": "Chords",
+        "createLabel": "Create a new Chord",
+        "createOrEditLabel": "Create or edit a Chord",
+        "notFound": "No Chord found"
+      },
+      "created": "A new Chord is created with identifier {{ param }}",
+      "updated": "A Chord is updated with identifier {{ param }}",
+      "deleted": "A Chord is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Chord {{ id }}?"
+      },
+      "detail": {
+        "title": "Chord"
+      },
+      "name": "Name",
+      "key": "Key",
+      "type": "Type",
+      "fret": "Fret"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="chord">
+            <h2><span jhiTranslate="chordProApp.chord.detail.title">Chord</span> {{chord.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="chordProApp.chord.name">Name</span></dt>
+                <dd>
+                    <span>{{chord.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="chordProApp.chord.key">Key</span></dt>
+                <dd>
+                    <span>{{chord.key}}</span>
+                </dd>
+                <dt><span jhiTranslate="chordProApp.chord.type">Type</span></dt>
+                <dd>
+                    <span>{{chord.type}}</span>
+                </dd>
+                <dt><span jhiTranslate="chordProApp.chord.fret">Fret</span></dt>
+                <dd>
+                    <span>{{chord.fret}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/chord', chord.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

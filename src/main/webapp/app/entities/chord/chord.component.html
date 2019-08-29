@@ -1,0 +1,63 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="chordProApp.chord.home.title">Chords</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-chord" [routerLink]="['/chord/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="chordProApp.chord.home.createLabel">
+            Create new Chord
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="alert alert-warning" *ngIf="chords?.length === 0">
+        <span jhiTranslate="chordProApp.chord.home.notFound">No chords found</span>
+    </div>
+    <div class="table-responsive" *ngIf="chords?.length > 0">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="chordProApp.chord.name">Name</span></th>
+            <th><span jhiTranslate="chordProApp.chord.key">Key</span></th>
+            <th><span jhiTranslate="chordProApp.chord.type">Type</span></th>
+            <th><span jhiTranslate="chordProApp.chord.fret">Fret</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let chord of chords ;trackBy: trackId">
+                <td><a [routerLink]="['/chord', chord.id, 'view' ]">{{chord.id}}</a></td>
+                <td>{{chord.name}}</td>
+                <td>{{chord.key}}</td>
+                <td>{{chord.type}}</td>
+                <td>{{chord.fret}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/chord', chord.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/chord', chord.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'chord', { outlets: { popup: chord.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
