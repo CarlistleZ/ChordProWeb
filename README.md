@@ -1,9 +1,24 @@
 # ChordPro
 
-This application was generated using JHipster 6.1.0, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v6.1.0](https://www.jhipster.tech/documentation-archive/v6.1.0).
+This is a web application that works for the discover screen of the ChordPro iOS
+application.  
+It provides the iOS app with download files for Files.app that can be opened and added in ChordPro.app.
+
+##Screenshots:
+
+### Web app:
+
+![Screenshot](screenshot.png)
+![Screenshot-2](screenshot-2.png)
+
+### iOS app:
+
+For More>Get More Songs
+![Screenshot](app-screenshot.png)
 
 ## Development
 
+This application was generated using JHipster 6.1.0, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v6.1.0](https://www.jhipster.tech/documentation-archive/v6.1.0).
 Before you can build this project, you must install and configure the following dependencies on your machine:
 
 1. [Node.js][]: We use Node to run a development web server and build the project.
