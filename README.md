@@ -8,7 +8,7 @@ Web backend application that works for the ChordPro iOS application. It provides
 * webpack
 * JHipster
 
-##Screenshots:
+## Screenshots:
 
 ### Web app:
 
