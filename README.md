@@ -1,8 +1,12 @@
 # ChordPro
 
-This is a web application that works for the discover screen of the ChordPro iOS
-application.  
-It provides the iOS app with download files for Files.app that can be opened and added in ChordPro.app.
+Web backend application that works for the ChordPro iOS application. It provides the song libraiy of each user and manages the user authentications.
+
+## Used technologies:
+* Angular
+* Spring Boot
+* webpack
+* JHipster
 
 ##Screenshots:
 
